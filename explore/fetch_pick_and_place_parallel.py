@@ -28,7 +28,7 @@ def make_env(env_id, idx, capture_video, run_name, gamma):
         if capture_video:
             env = gym.make(env_id, render_mode="rgb_array")
         else:
-            env = gym.make(env_id, render_mode="human")
+            env = gym.make(env_id)
         env = gym.wrappers.FlattenObservation(env)  # deal with dm_control's Dict observation space
         env = gym.wrappers.RecordEpisodeStatistics(env)
         if capture_video:
