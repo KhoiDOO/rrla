@@ -43,6 +43,12 @@ pip install tensorboard
 pip install wandb
 ```
 
+# Warning
+There is a conflicting problem with ```Mujoco``` and ```GLFW``` package, if you do not need ```human mode``` in rendering, uninstall ```GLFW```
+```
+pip uninstall glfw
+```
+
 ## Setup Torch
 ```
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
